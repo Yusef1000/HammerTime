@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Genre;
+import play.data.Form;
 import play.mvc.*;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -19,6 +20,8 @@ public class Genres extends Controller {
     }
 
     public Result create() {
+        Genre genre = Form.form(Genre.class).bindFromRequest().get();
+        flash("success", "received data: " + genre.name);
         return redirect(routes.Genres.index());
     }
 
