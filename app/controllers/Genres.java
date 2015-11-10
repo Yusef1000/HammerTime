@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Genre;
+import models.Movie;
 import play.data.Form;
 import play.mvc.*;
 import play.mvc.Controller;
@@ -24,6 +25,16 @@ public class Genres extends Controller {
         genre.save();
         flash("success", "Saved new Genre: " + genre.name);
         return redirect(routes.Genres.index());
+    }
+
+    public Result show(Long id) {
+        Genre genre = Genre.find.byId(id);
+        if(genre == null) {
+            return notFound("not found");
+        } else {
+            List<Movie> movies = genre.movieList;
+            return ok(views.html.genres.show.render(genre, movies));
+        }
     }
 
 }

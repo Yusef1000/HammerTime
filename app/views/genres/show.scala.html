@@ -1,0 +1,17 @@
+@(genre: Genre, movies: List[Movie])
+
+@main("Genres") {
+
+<h1>Genre: @genre.name</h1>
+
+@if(movies.isEmpty()) {
+<h2>No movies available in this genre</h2>
+} else {
+<h2>Movie List for Genre: @genre.name</h2>
+<ul>
+    @for(m <- movies) {
+    <li>@m.title</li>
+    }
+</ul>
+}
+}

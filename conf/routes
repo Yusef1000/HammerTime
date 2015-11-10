@@ -7,6 +7,7 @@ GET     /                           controllers.Application.index()
 
 GET     /genres                     controllers.Genres.index()
 POST    /genres                     controllers.Genres.create()
+GET     /genres/:id                 controllers.Genres.show(id:Long)
 
 GET     /movies                     controllers.Movies.index()
 POST    /movies                     controllers.Movies.create()
