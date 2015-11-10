@@ -21,7 +21,8 @@ public class Genres extends Controller {
 
     public Result create() {
         Genre genre = Form.form(Genre.class).bindFromRequest().get();
-        flash("success", "received data: " + genre.name);
+        genre.save();
+        flash("success", "Saved new Genre: " + genre.name);
         return redirect(routes.Genres.index());
     }
 
