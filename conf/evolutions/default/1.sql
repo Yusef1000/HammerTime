@@ -9,10 +9,23 @@ create table genre (
   constraint pk_genre primary key (id))
 ;
 
+create table movie (
+  id                        bigserial not null,
+  title                     varchar(255),
+  summary                   varchar(255),
+  url                       varchar(255),
+  genre_id                  bigint,
+  constraint pk_movie primary key (id))
+;
+
+alter table movie add constraint fk_movie_genre_1 foreign key (genre_id) references genre (id);
+create index ix_movie_genre_1 on movie (genre_id);
 
 
 
 # --- !Downs
 
 drop table if exists genre cascade;
+
+drop table if exists movie cascade;
 
