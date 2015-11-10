@@ -17,4 +17,7 @@ public class Genre extends Model {
     @Constraints.Required
     public String name;
 
+    // A finder object for easier querying
+    public static Finder<Long, Genre> find = new Finder<Long, Genre>(Genre.class);
+
 }
