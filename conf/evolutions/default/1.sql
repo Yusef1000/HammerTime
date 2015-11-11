@@ -18,6 +18,13 @@ create table movie (
   constraint pk_movie primary key (id))
 ;
 
+create table user (
+  id                        bigserial not null,
+  username                  varchar(255),
+  password_hash             varchar(255),
+  constraint pk_user primary key (id))
+;
+
 alter table movie add constraint fk_movie_genre_1 foreign key (genre_id) references genre (id);
 create index ix_movie_genre_1 on movie (genre_id);
 
@@ -28,4 +35,6 @@ create index ix_movie_genre_1 on movie (genre_id);
 drop table if exists genre cascade;
 
 drop table if exists movie cascade;
+
+drop table if exists user cascade;
 
