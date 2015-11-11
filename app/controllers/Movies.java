@@ -28,6 +28,7 @@ public class Movies extends Controller {
         Genre genre = Genre.find.byId(Long.parseLong(genre_id));
         if(genre == null) {
             flash("error", "Invalid Genre: " + genre_id + " Try again.");
+            return redirect(routes.Movies.index());
         }
 
         Movie movie = movieForm.get();
