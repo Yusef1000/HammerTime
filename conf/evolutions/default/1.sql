@@ -18,11 +18,11 @@ create table movie (
   constraint pk_movie primary key (id))
 ;
 
-create table user (
+create table users (
   id                        bigserial not null,
   username                  varchar(255),
   password_hash             varchar(255),
-  constraint pk_user primary key (id))
+  constraint pk_users primary key (id))
 ;
 
 alter table movie add constraint fk_movie_genre_1 foreign key (genre_id) references genre (id);
@@ -36,5 +36,5 @@ drop table if exists genre cascade;
 
 drop table if exists movie cascade;
 
-drop table if exists user cascade;
+drop table if exists users cascade;
 
