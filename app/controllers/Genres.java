@@ -20,6 +20,7 @@ public class Genres extends Controller {
         return ok(views.html.genres.index.render(genres));
     }
 
+    @Security.Authenticated(UserAuth.class)
     public Result create() {
         Genre genre = Form.form(Genre.class).bindFromRequest().get();
         genre.save();
