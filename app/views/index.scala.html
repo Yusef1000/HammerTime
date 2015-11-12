@@ -2,6 +2,30 @@
 
 @main("Welcome to Play") {
 
-    @message
+    <h1>Login Form</h1>
+    <form action="@routes.Application.login()" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <br>
 
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <br>
+
+        <button>Login</button>
+    </form>
+
+
+    <h1>Signup Form</h1>
+    <form action="@routes.Application.signup()" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <br>
+
+        <button>Sign Up</button>
+    </form>
 }
