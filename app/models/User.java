@@ -7,6 +7,7 @@ import play.data.validation.Constraints;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Column;
 import javax.validation.Constraint;
 
 /**
@@ -19,6 +20,7 @@ public class User extends Model {
     public Long id;
 
     @Constraints.Required
+    @Column(unique=true)
     public String username;
 
 
