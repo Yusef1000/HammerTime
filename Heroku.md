@@ -109,6 +109,12 @@ Opening a PostgreSQL command line:
 $ heroku pg:psql
 ```
 
+### Reference Links
+
+https://www.playframework.com/documentation/2.4.x/ApplicationSecret
+https://www.playframework.com/documentation/2.4.x/ProductionConfiguration
+https://www.playframework.com/documentation/2.4.x/ProductionHeroku
+https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application
 
 
 [.gitignore]: .gitignore
