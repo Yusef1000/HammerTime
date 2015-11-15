@@ -26,11 +26,13 @@ public class Application extends Controller {
         if(user != null && user.authenticate(password)) {
             session("user_id", user.id.toString());
             flash("success", "Welcome back " + user.username);
+            return redirect(routes.Genres.create());
         } else {
-            flash("error", "Invalid login. Check your username and password.");
+            flash("error", "Invalid login, please try again");
         }
-
         return redirect(routes.Application.index());
+
+
 
     }
 

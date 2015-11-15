@@ -23,7 +23,7 @@ public class UserAuth extends Security.Authenticator {
     @Override
     public Result onUnauthorized(final Http.Context ctx) {
         ctx.flash().put("error",
-                "Nice try, but you need to log in first!");
+                "Log in first please");
         return redirect(routes.Application.index());
     }
 }

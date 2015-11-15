@@ -27,14 +27,14 @@ public class Movies extends Controller {
 
         Genre genre = Genre.find.byId(Long.parseLong(genre_id));
         if(genre == null) {
-            flash("error", "Invalid Genre: " + genre_id + " Try again.");
+            flash("error", "Invalid Tool Type: " + genre_id + " please try again.");
             return redirect(routes.Movies.index());
         }
 
         Movie movie = movieForm.get();
         movie.genre = genre;
         movie.save();
-        flash("success", "Saved new Movie: " + movie.title);
+        flash("success", "Saved new Tool: " + movie.title);
         return redirect(routes.Movies.index());
     }
 

@@ -2,30 +2,52 @@
 
 @main("Welcome to Play") {
 
-    <h1>Login Form</h1>
+    <style>
+    div{float:left; width:1290px; height:1000px; margin:4px; color:#FFF; font-size:30px; padding:20px;}
+    div.gradient1{
+    background: #999;
+    background: -webkit-linear-gradient(turquoise, #000);
+    background: -moz-linear-gradient(turquoise, #000);
+    background: -ms-linear-gradient(turquoise, #000);
+    background: -o-linear-gradient(turquoise, #000);
+    background: linear-gradient(turquoise, #000);
+    }
+    </style>
+
+    <div class="gradient1">
+
+    <center><h1>Login Form</h1></center>
     <form action="@routes.Application.login()" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username">
+        <center><label for="username">Username</label></center>
+        <center><input type="text" name="username"></center>
         <br>
 
-        <label for="password">Password</label>
-        <input type="password" name="password">
+        <center><label for="password">Password</label></center>
+        <center><input type="password" name="password"></center>
         <br>
 
-        <button>Login</button>
+        <center><button>Login</button></center>
     </form>
 
 
-    <h1>Signup Form</h1>
+        <center><h1>Signup Form</h1></center>
     <form action="@routes.Application.signup()" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username">
+        <center> <label for="username">Username</label></center>
+        <center><input type="text" name="username"></center>
         <br>
 
-        <label for="password">Password</label>
-        <input type="password" name="password">
+        <center><label for="password">Password</label></center>
+        <center><input type="password" name="password"></center>
         <br>
 
-        <button>Sign Up</button>
+        <center><button>Sign Up</button></center>
     </form>
+
+
+    <form action="@routes.Application.login()" method="post">
+        <center><button>Logout</button></center>
+    </form>
+
+    </div>
+
 }
