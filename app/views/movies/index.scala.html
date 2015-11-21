@@ -29,23 +29,26 @@
     <input type="text" name="url">
     <br>
 
-    <label for="genre_id">Genre</label>
+    <label for="genre_id">Tool Type</label>
     <select name="genre_id" id="genre">
         @for(g <- genres) {
             <option value="@g.id">@g.name</option>
         }
     </select>
     <br>
+
     <button>Submit</button>
+
 </form>
 
 @if(movies.isEmpty()) {
 <h2>No movies available</h2>
 } else {
-<h2>Movie List</h2>
+<h2>Tools</h2>
 <ul>
     @for(m <- movies) {
-    <li>@m.title</li>
+    <h5>@m.title</h5>
+    <ol style="font-size: 20px;">@m.summary</ol>
     }
 </ul>
     </div>

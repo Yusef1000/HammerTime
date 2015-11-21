@@ -9,9 +9,7 @@ import play.mvc.Result;
 
 import java.util.List;
 
-/**
- * Created by medgardo on 11/10/15.
- */
+
 public class Genres extends Controller {
 
     // List all of the Genres

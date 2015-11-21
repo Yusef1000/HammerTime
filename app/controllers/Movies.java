@@ -10,9 +10,7 @@ import java.util.List;
 
 import static play.data.Form.form;
 
-/**
- * Created by medgardo on 11/10/15.
- */
+
 public class Movies extends Controller {
 
     public Result index() {

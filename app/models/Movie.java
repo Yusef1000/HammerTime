@@ -7,9 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-/**
- * Created by medgardo on 11/10/15.
- */
+
 @Entity
 public class Movie extends Model {
     @Id

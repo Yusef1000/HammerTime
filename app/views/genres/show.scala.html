@@ -2,16 +2,31 @@
 
 @main("Genres") {
 
-<h1>Genre: @genre.name</h1>
+<style>
+    div{float:left; width:1290px; height:1000px; margin:4px; color:#FFF; font-size:30px; padding:20px;}
+    div.gradient1{
+    background: #999;
+    background: -webkit-linear-gradient(turquoise, #000);
+    background: -moz-linear-gradient(turquoise, #000);
+    background: -ms-linear-gradient(turquoise, #000);
+    background: -o-linear-gradient(turquoise, #000);
+    background: linear-gradient(turquoise, #000);
+    }
+</style>
+
+<div class="gradient1">
+
+<h1>Tool Type: @genre.name</h1>
 
 @if(movies.isEmpty()) {
-<h2>No movies available in this genre</h2>
+<h2>No tools available for this type</h2>
 } else {
-<h2>Movie List for Genre: @genre.name</h2>
+<h2>Tools for this type: @genre.name</h2>
 <ul>
     @for(m <- movies) {
     <li>@m.title</li>
     }
 </ul>
+    </div>
 }
 }

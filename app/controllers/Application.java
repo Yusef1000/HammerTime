@@ -23,7 +23,7 @@ public class Application extends Controller {
 
         User user = User.find.where().eq("username", username).findUnique();
 
-        if(user != null && user.authenticate(password)) {
+        if (user != null && user.authenticate(password)) {
             session("user_id", user.id.toString());
             flash("success", "Welcome back " + user.username);
             return redirect(routes.Genres.create());
@@ -31,9 +31,6 @@ public class Application extends Controller {
             flash("error", "Invalid login, please try again");
         }
         return redirect(routes.Application.index());
-
-
-
     }
 
     public Result signup() {

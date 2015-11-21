@@ -8,12 +8,12 @@ POST    /login                      controllers.Application.login()
 POST    /signup                     controllers.Application.signup()
 GET     /logout                     controllers.Application.logout()
 
-GET     /genres                     controllers.Genres.index()
-POST    /genres                     controllers.Genres.create()
-GET     /genres/:id                 controllers.Genres.show(id:Long)
+GET     /tooltypes                    controllers.Genres.index()
+POST    /tooltypes                    controllers.Genres.create()
+GET     /tooltypes/:id                 controllers.Genres.show(id:Long)
 
-GET     /movies                     controllers.Movies.index()
-POST    /movies                     controllers.Movies.create()
+GET     /tools                     controllers.Movies.index()
+POST    /tools                    controllers.Movies.create()
 
 
 # Map static resources from the /public folder to the /assets URL path
