@@ -27,9 +27,7 @@
         <h2>Tool Types</h2>
         <ul>
             @for(g <- genres) {
-            <form action="@routes.Genres.show(1)" method="post">
                 <button>@g.name</button>
-            </form>
             }
         </ul>
         </center>
